@@ -1,0 +1,83 @@
+
+  <div class="container">
+    <!---heading---->
+    <%- include ('./partials/messages') %>
+    
+    <form method="POST" action=" ">
+      <header class="heading"> Formulaire d'inscription</header>
+      <hr>
+      </hr>
+      <!---Form starting---->
+      <div class="row ">
+        <!-----Pour le pseudo---->
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-xs-4">
+              <label class="pass">Pseudo :</label></div>
+            <div class="col-xs-8">
+              <input type="name" id="name" name="name" class="form-control" placeholder="Entrer votre nom"
+                value="<%= typeof name != 'undefined' ? name : '' %>" />
+            </div>
+          </div>
+        </div>
+        <!-----Pour le mail---->
+
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-xs-4">
+              <label class="pass">E_mail :</label></div>
+            <div class="col-xs-8">
+              <input type="email" id="email" name="email" class="form-control" placeholder="Entrer votre Email"
+                value="<%= typeof email != 'undefined' ? email : '' %>" />
+            </div>
+          </div>
+        </div>
+
+        <!-----Pour le mot de passe et la confirmation---->
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-xs-4">
+              <label class="pass">Entrez un mot de passe :</label></div>
+            <div class="col-xs-8">
+              <input type="password" id="password" name="password" class="form-control"
+                placeholder="Creer un mot de Passe" value="<%= typeof password != 'undefined' ? password : '' %>" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-xs-4">
+              <label class="pass">Confirmez votre mot de passe :</label></div>
+            <div class="col-xs-8">
+              <input type="password" id="password2" name="password2" class="form-control"
+                placeholder="Confirmer votre mot de  Passe"
+                value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+            </div>
+          </div>
+        </div>
+        <!-----Pour le captcha---->
+        <!--div class="col-xs-12">
+            </br>
+            <div class="g-recaptcha" , id="captcha" , data-sitekey="6Lc1m-IUAAAAAKMBN8L8rJ4eUzPHSPRYb8DhvKj5"></div>
+            </br>
+          
+        </div-->
+
+
+        <!-----Pour le bouton d'enregistrement---->
+
+        <div class="col-sm-12">
+          <div class="row">
+          <div class="btn btn-warning">
+            <input class="btn btn-warning" type="submit" name="forminscription" value="S'inscrire" />
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </form>
+    <p class="lead mt-4">Avez vous déja un compte? <a href="/users/login">Connectez vous</a></p>
+
+
+  </div>
